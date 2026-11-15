@@ -6,6 +6,8 @@
 # le due reti, non l'energia reale di un chip.
 # =====================================================================
 
+
+#Per la rappresentazione sono convenzionalmente utilizzati o i numeri in virgola mobile a 32 bit o gli interi a 8
 SCENARI = {
     "fp32": {"mult": 3.7e-12, "add": 0.9e-12},    # virgola mobile a 32 bit
     "int8": {"mult": 0.2e-12, "add": 0.03e-12},   # interi a 8 bit
@@ -23,8 +25,8 @@ def e_add(scenario):
 
 
 # ---------------------------------------------------------------------
-# Varianti di calcolo (aggiunte dopo il confronto con Höfflin e Wassner,
-# Acta Astronautica 248, 2026)
+# Varianti di calcolo (aggiunte in base all'articolo di Höfflin e Wassner
+#(https://www.sciencedirect.com/science/article/pii/S0094576526004455)
 # ---------------------------------------------------------------------
 
 # Costo dell'aggiornamento di un neurone LIF a ogni passo:

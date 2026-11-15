@@ -3,7 +3,6 @@
 # Addestramento della CNN su EuroSAT.
 # Impostazioni identiche a quelle della SNN (05_snn.py), per un confronto equo:
 #   batch 128, Adam, learning rate 0,001, 5 epoche fissate a priori, seed 42.
-# Risultato: [da completare dopo l'esecuzione]
 # I pesi vengono salvati in cnn_eurosat.pt
 # =====================================================================
 

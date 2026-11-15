@@ -2,9 +2,9 @@
 # 03_mac_cnn.py
 # Conteggio delle MAC (multiply-accumulate) della CNN e stima
 # dell'energia per immagine (modello energetico del par. 5.3).
-# Risultato: [da completare dopo l'esecuzione]
+
 #
-# Semplificazioni da dichiarare nella tesi:
+#IMPORTANTE:
 #   - si contano solo convoluzioni e strato lineare;
 #     pooling, ReLU e bias sono trascurati (costo minimo);
 #   - la stima ignora gli accessi alla memoria.

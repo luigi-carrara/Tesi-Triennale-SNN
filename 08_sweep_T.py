@@ -1,13 +1,13 @@
 # =====================================================================
 # 08_sweep_T.py
-# Quanto contano i passi temporali? Addestra la SNN con valori diversi
+# Addestra la SNN con valori diversi
 # di T e per ciascuno salva accuratezza e conteggi delle operazioni.
 # L'energia si calcola poi dai conteggi (pagina Streamlit, scheda "Sweep su T").
 #
 # ATTENZIONE: è lungo. Ogni T è un addestramento completo (5 epoche) e il
-# costo cresce con T. Conviene lanciarlo sul PC, non sul Raspberry Pi.
+# costo cresce con T.
 # Impostazioni come 05_snn.py: batch 128, Adam, lr 0,001, seed 42.
-# I risultati vengono salvati dopo ogni T, così se lo interrompi non perdi tutto.
+# I risultati vengono salvati dopo ogni T.
 # =====================================================================
 
 import time

@@ -4,7 +4,7 @@
 # emessi sul test set (serve la SNN addestrata: snn_eurosat.pt).
 # Il conteggio degli spike è in conteggi.py, i costi sono in energia.py.
 #
-# Semplificazioni da dichiarare nella tesi:
+# IMPORTANTE:
 #   - nella versione base gli accessi alla memoria non sono contati
 #     (la pagina Streamlit permette di provare un modello semplice);
 #   - l'aggiornamento di un neurone costa come una MAC (perdita + somma);

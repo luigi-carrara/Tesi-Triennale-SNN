@@ -5,7 +5,6 @@
 # learning rate 0,001, 5 epoche fissate a priori, seed 42.
 # Parametri della SNN: beta 0,9, 25 passi temporali, codifica diretta,
 # gradiente surrogato fast sigmoid.
-# Risultato: [da completare dopo l'esecuzione]
 # I pesi vengono salvati in snn_eurosat.pt
 # =====================================================================
 
@@ -48,7 +47,7 @@ def train_one_epoch():
         loss.backward()                  # backpropagation nel tempo, col gradiente surrogato
         optimizer.step()
         total_loss += loss.item() * images.size(0)
-        if (i + 1) % 20 == 0:            # l'addestramento è lento: stampo ogni tanto
+        if (i + 1) % 20 == 0:
             print(f"  batch {i+1}/{len(train_loader)} - loss: {loss.item():.4f}")
     return total_loss / len(train_loader.dataset)
 
@@ -81,7 +80,7 @@ for epoch in range(num_epochs):
     storia["accuratezza"].append(acc)
     storia["tempo_s"].append(durata)
 
-# Attenzione al nome: i pesi della SNN vanno in un file diverso da quelli della CNN
+
 torch.save(model.state_dict(), "snn_eurosat.pt")
 print("Modello salvato in snn_eurosat.pt")
 

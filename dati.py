@@ -3,10 +3,6 @@
 # Caricamento del dataset, usato da tutti gli script.
 # Per cambiare dataset o dimensione delle immagini basta modificare qui.
 #
-# Dataset: EuroSAT (immagini Sentinel-2, 10 classi di uso del suolo, RGB).
-# Attenzione: sono immagini di un satellite di osservazione, non di un
-# CubeSat. Nella tesi le uso come esempio di compito che un CubeSat
-# potrebbe svolgere a bordo.
 # =====================================================================
 
 from pathlib import Path
