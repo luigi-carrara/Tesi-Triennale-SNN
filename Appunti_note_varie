@@ -1,0 +1,12 @@
+//PyTorch breve Storia
+PyTorch: Libreria open source per il deep learning in Python, sviluppata da Facebook AI Research (2017) a partire da Torch; oggi gestita dalla PyTorch Foundation
+
+Torch nasce nel 2002 (Ronan Collobert, Samy Bengio e Johnny Mariéthoz, all'istituto di ricerca Idiap in Svizzera). Era scritta in C e usata tramite il linguaggio Lua, poco diffuso, e questo ne limitava l'adozione.
+PyTorch è stata sviluppata da Facebook AI Research (FAIR, oggi Meta AI) e rilasciata pubblicamente all'inizio del 2017. Riprendeva le idee e parte del codice di Torch, ma portati su Python. Tra i creatori principali ci sono Adam Paszke, Sam Gross, Soumith Chintala e Gregory Chanan.
+Nel 2022 il progetto è passato alla PyTorch Foundation, sotto la Linux Foundation. Oggi quindi non è più di proprietà di Meta, ma è gestito da un consorzio di aziende.
+
+Una buona baseline deve essere:
+
+equa: confrontabile a parità di condizioni. È il motivo per cui la tua CNN ha la stessa architettura, gli stessi dati, lo stesso preprocessing e gli stessi iperparametri della SNN;
+nota e semplice: un modello standard, che chiunque possa capire e riprodurre;
+ragionevole: deve funzionare bene. Una baseline volutamente scadente farebbe sembrare bravo qualunque modello, e sarebbe un confronto scorretto.

@@ -1,0 +1,37 @@
+{
+  "modello": "SNN",
+  "num_steps": 25,
+  "immagini_test": 5400,
+  "accuratezza": 0.46074074074074073,
+  "spike_per_immagine": {
+    "spike_lif1": 3026.7833333333333,
+    "spike_lif2": 5157.039629629629,
+    "spike_lif3": 60.352777777777774
+  },
+  "tasso_di_spike": {
+    "lif1": 0.051475907029478456,
+    "lif2": 0.12892599074074074,
+    "lif3": 0.2414111111111111
+  },
+  "sop_per_immagine": 2527589.3592592594,
+  "mac_conv1_per_passo": 705600,
+  "aggiornamenti_neuroni": 99050,
+  "energia_uJ": {
+    "fp32": {
+      "conv1_una_volta": 3.2457599999999998,
+      "conv1_ogni_passo": 81.14399999999999,
+      "sop": 2.2748304233333334,
+      "neuroni": 0.45563,
+      "totale_conv1_una_volta": 5.976220423333333,
+      "totale_conv1_ogni_passo": 83.87446042333332
+    },
+    "int8": {
+      "conv1_una_volta": 0.16228800000000004,
+      "conv1_ogni_passo": 4.057200000000001,
+      "sop": 0.07582768077777777,
+      "neuroni": 0.022781500000000003,
+      "totale_conv1_una_volta": 0.2608971807777778,
+      "totale_conv1_ogni_passo": 4.155809180777778
+    }
+  }
+}

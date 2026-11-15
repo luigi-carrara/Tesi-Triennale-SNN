@@ -1,0 +1,30 @@
+Di seguito la struttura del presente progetto:
+
+.venv: Ambiente virtuale Python
+requirements.txt: Elenco delle dipendenze e delle librerie da installare per riprodurre il test su altre macchine
+Cartella data: Dati scaricati (EuroSAT; opzionale: data/ops_sat con il dataset OPS-SAT)
+Cartella risultati: File .json e grafici (.png) prodotti dagli script
+
+// Moduli condivisi (non si lanciano direttamente)
+
+dati.py: Caricamento di EuroSAT (immagini 32x32, 3 canali), divisione 80/20 con seme fisso
+modelli.py: Definizione delle classi CNN e SNN
+energia.py: Costi energetici per operazione (Horowitz, 45 nm, fp32 e int8) e funzioni di calcolo dell'energia di CNN e SNN
+conteggi.py: Conteggio degli spike della SNN sul test set e delle operazioni che ne derivano (SOP, aggiornamenti, MAC dello strato 1)
+
+// Script da eseguire in ordine
+
+01_dati.py: Controllo dei dati EuroSAT (dimensioni, classi, esempi)
+02_cnn.py: Addestra la CNN per 5 epoche; salva i pesi in cnn_eurosat.pt e i risultati in risultati/cnn.json
+03_mac_cnn.py: Conta le MAC per layer con gli hook di PyTorch e stima l'energia; salva risultati/cnn_mac.json
+04_snn_prova.py: Prova della SNN non addestrata (accuratezza a caso) a confronto con la CNN addestrata
+05_snn.py: Addestra la SNN con la stessa procedura della CNN; salva i pesi in snn_eurosat.pt e i risultati in risultati/snn.json
+06_energia_snn.py: Conta gli spike reali e stima l'energia della SNN; salva risultati/snn_energia.json
+07_confronto.py: Confronta CNN e SNN (accuratezza, tempi, energia); salva confronto.png e confronto_energia.png
+08_sweep_T.py: Addestra la SNN con T = 2, 4, 8, 16, 25 passi temporali; salva risultati/sweep_T.json
+
+
+// Interfaccia
+
+app.py: Pagina Streamlit che mostra i risultati (dati, accuratezza, energia, sweep su T, demo su una singola immagine) e permette di lanciare gli script. Si avvia con: streamlit run app.py
+main.py: Pannello di controllo Tkinter per lanciare gli script (sostituibile da app.py)

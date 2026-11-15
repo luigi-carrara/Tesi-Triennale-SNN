@@ -1,0 +1,36 @@
+====================================================================
+               CONFRONTO COMPLETO: MNIST vs N-MNIST
+====================================================================
+
+1. MNIST (Modified National Institute of Standards and Technology)
+--------------------------------------------------------------------
+* Natura dei dati: Immagini statiche 2D in scala di grigi.
+* Risoluzione: 28 x 28 pixel (784 valori totali per immagine).
+* Dimensione: 70.000 campioni (60.000 training / 10.000 test).
+* Rappresentazione: Ogni pixel ha un'intensità fissa da 0 a 255.
+* Modelli ideali: Reti tradizionali (CNN, MLP).
+* Utilizzo: Standard di riferimento per la computer vision classica.
+
+
+2. N-MNIST (Neuromorphic-MNIST)
+--------------------------------------------------------------------
+* Natura dei dati: Flussi di eventi temporali (spike), non immagini.
+* Risoluzione: 28 x 28 pixel.
+* Dimensione: 70.000 campioni (60.000 training / 10.000 test).
+* Rappresentazione: Registrato muovendo un sensore neuromorfo davanti 
+  alle immagini MNIST. Rileva solo i cambiamenti di luce nel tempo.
+* Modelli ideali: Reti neurali a impulsi (Spiking Neural Networks - SNN).
+* Utilizzo: Benchmark per l'hardware e l'algoritmica neuromorfa.
+
+
+====================================================================
+                       TABELLA COMPARATIVA
+====================================================================
+Caratteristica      | MNIST                 | N-MNIST
+--------------------|-----------------------|-----------------------
+Tipo di dati        | Immagini (Frame-based)| Eventi (Spike-based)
+Dimensione spaziale | 28 x 28               | 28 x 28
+Dimensione temporale| Assente               | Presente (microsecondi)
+Architettura target | CNN, MLP              | SNN
+Hardware ideale     | GPU / TPU tradizionali| Chip Neuromorfi (Loihi)
+====================================================================

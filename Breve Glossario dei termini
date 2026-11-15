@@ -1,0 +1,38 @@
+// Glossario dei Termini Utili
+
+AC: Accumulate. Solo somma di un peso (acc ← acc + w); è l'operazione tipica delle SNN, perché uno spike vale 0 o 1 e non serve moltiplicare
+Adam: Adaptive Moment Estimation. Ottimizzatore che adatta il passo di aggiornamento per ogni singolo peso
+ANN: Artificial Neural Network. Rete neurale artificiale composta da neuroni che calcolano una somma pesata seguita da una funzione di attivazione
+Backpropagation: Algoritmo che calcola i gradienti della loss rispetto a ogni peso, risalendo la rete all'indietro con la regola della catena
+Batch: Gruppo di esempi elaborati insieme prima di un aggiornamento dei pesi (nel nostro caso 128 immagini)
+Beta (β): Fattore di decadimento del potenziale di membrana nel neurone LIF; con β = 0,9 il potenziale conserva il 90% del valore a ogni passo
+BPTT: Backpropagation Through Time. Backpropagation che propaga il gradiente anche all'indietro attraverso i passi temporali
+CNN: Convolutional Neural Network. Rete neurale artificiale specializzata per le immagini, basata su filtri convoluzionali che scorrono sull'ingresso
+Codifica diretta: I valori dei pixel vengono dati così come sono al primo layer a ogni passo temporale, ed è quel layer a produrre gli spike
+Cross-entropy: Funzione di loss standard per la classificazione; penalizza la rete quando assegna poca probabilità alla classe corretta
+CUDA: Piattaforma NVIDIA per il calcolo su GPU (non disponibile su schede AMD)
+DVS: Dynamic Vision Sensor. Telecamera a eventi in cui ogni pixel segnala solo i cambiamenti di luminosità
+Epoca: Passaggio completo su tutto il training set
+Fan-out: Numero di neuroni raggiunti dall'uscita di un neurone; serve per contare le AC di una SNN
+Hook: Funzione che PyTorch chiama automaticamente quando un layer calcola la sua uscita; l'abbiamo usata per contare le MAC
+Latency coding: Caso particolare di temporal coding in cui ogni ingresso emette un solo spike, tanto prima quanto più lo stimolo è intenso
+LIF: Leaky Integrate-and-Fire. Modello di neurone a impulsi: integra l'ingresso, perde carica nel tempo ed emette uno spike quando supera la soglia
+Loss: Funzione che misura l'errore della rete; l'addestramento cerca di minimizzarla
+MAC: Multiply-Accumulate. Moltiplica un peso per un ingresso e somma al totale (acc ← acc + w·x); è l'operazione tipica delle CNN
+Max pooling: Operazione che divide la mappa in blocchi (es. 2×2) e tiene solo il valore massimo, dimezzando le dimensioni
+MNIST: Modified National Institute of Standards and Technology. Dataset di 70.000 immagini 28×28 in scala di grigi di cifre scritte a mano (0-9): 60.000 per il training e 10.000 per il test
+N-MNIST: Neuromorphic MNIST. Le stesse cifre registrate con un sensore DVS in movimento: contiene flussi di eventi invece di immagini
+Parametri: Pesi e bias che la rete impara durante l'addestramento (29.826 sia nella nostra CNN sia nella SNN)
+Passo temporale: Unità di tempo discreta della simulazione di una SNN (nel nostro caso 25 passi per immagine)
+Potenziale di membrana: Stato interno del neurone a impulsi, che accumula gli ingressi e determina quando viene emesso uno spike
+Rate coding: Codifica in cui l'informazione sta nel numero di spike: più lo stimolo è intenso, più spike vengono emessi
+ReLU: Rectified Linear Unit. Funzione di attivazione standard nelle reti profonde moderne: f(x) = max(0, x)
+Seed: Valore che inizializza il generatore di numeri casuali e rende i risultati riproducibili
+SNN: Spiking Neural Network. Rete neurale a impulsi, in cui i neuroni comunicano tramite spike distribuiti nel tempo
+Soglia (threshold): Valore del potenziale di membrana oltre il quale il neurone emette uno spike (nel nostro caso 1,0)
+Sparsità: Quota di neuroni inattivi in un certo istante; più è alta, meno operazioni esegue una SNN
+Spike: Impulso binario (0 o 1) emesso quando il potenziale di membrana supera la soglia
+Surrogate gradient: Approssimazione differenziabile usata nella backpropagation al posto della derivata dello spike (funzione gradino di Heaviside), che altrimenti sarebbe nulla quasi ovunque
+Temporal coding: Codifica in cui l'informazione sta nell'istante in cui vengono emessi gli spike, non nel loro numero
+Tensore: In PyTorch, array multidimensionale di numeri (es. un batch di immagini MNIST ha forma [128, 1, 28, 28])
+====================================================================

@@ -1,0 +1,97 @@
+[
+  {
+    "num_steps": 2,
+    "immagini_test": 5400,
+    "accuratezza": 0.29833333333333334,
+    "spike_per_immagine": {
+      "spike_lif1": 164.55351851851853,
+      "spike_lif2": 142.75629629629628,
+      "spike_lif3": 4.895740740740741
+    },
+    "tasso_di_spike": {
+      "lif1": 0.03498161533131772,
+      "lif2": 0.04461134259259259,
+      "lif3": 0.24478703703703703
+    },
+    "sop_per_immagine": 135983.32,
+    "mac_conv1_per_passo": 705600,
+    "aggiornamenti_neuroni": 7924,
+    "tempo_addestramento_s": 205.3056800365448
+  },
+  {
+    "num_steps": 4,
+    "immagini_test": 5400,
+    "accuratezza": 0.3451851851851852,
+    "spike_per_immagine": {
+      "spike_lif1": 601.7098148148148,
+      "spike_lif2": 522.3803703703703,
+      "spike_lif3": 9.856851851851852
+    },
+    "tasso_di_spike": {
+      "lif1": 0.06395725072436381,
+      "lif2": 0.08162193287037037,
+      "lif3": 0.2464212962962963
+    },
+    "sop_per_immagine": 497557.03037037037,
+    "mac_conv1_per_passo": 705600,
+    "aggiornamenti_neuroni": 15848,
+    "tempo_addestramento_s": 324.39580154418945
+  },
+  {
+    "num_steps": 8,
+    "immagini_test": 5400,
+    "accuratezza": 0.31574074074074077,
+    "spike_per_immagine": {
+      "spike_lif1": 1004.0303703703704,
+      "spike_lif2": 1078.0242592592592,
+      "spike_lif3": 25.45388888888889
+    },
+    "tasso_di_spike": {
+      "lif1": 0.053360457608969514,
+      "lif2": 0.08422064525462963,
+      "lif3": 0.31817361111111114
+    },
+    "sop_per_immagine": 831963.8751851852,
+    "mac_conv1_per_passo": 705600,
+    "aggiornamenti_neuroni": 31696,
+    "tempo_addestramento_s": 447.8478145599365
+  },
+  {
+    "num_steps": 16,
+    "immagini_test": 5400,
+    "accuratezza": 0.5022222222222222,
+    "spike_per_immagine": {
+      "spike_lif1": 1602.7979629629629,
+      "spike_lif2": 2664.3312962962964,
+      "spike_lif3": 36.63925925925926
+    },
+    "tasso_di_spike": {
+      "lif1": 0.04259135743417737,
+      "lif2": 0.10407544126157407,
+      "lif3": 0.22899537037037038
+    },
+    "sop_per_immagine": 1338237.387037037,
+    "mac_conv1_per_passo": 705600,
+    "aggiornamenti_neuroni": 63392,
+    "tempo_addestramento_s": 763.8776099681854
+  },
+  {
+    "num_steps": 25,
+    "immagini_test": 5400,
+    "accuratezza": 0.43407407407407406,
+    "spike_per_immagine": {
+      "spike_lif1": 2906.039074074074,
+      "spike_lif2": 5092.787037037037,
+      "spike_lif3": 56.88037037037037
+    },
+    "tasso_di_spike": {
+      "lif1": 0.04942243323255228,
+      "lif2": 0.12731967592592594,
+      "lif3": 0.2275214814814815
+    },
+    "sop_per_immagine": 2427985.1148148146,
+    "mac_conv1_per_passo": 705600,
+    "aggiornamenti_neuroni": 99050,
+    "tempo_addestramento_s": 1217.5142283439636
+  }
+]
